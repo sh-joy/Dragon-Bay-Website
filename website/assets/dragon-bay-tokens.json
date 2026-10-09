@@ -1,0 +1,36 @@
+{
+  "colors": {
+    "vividRed": "#E01E25",
+    "strongBlue": "#1163BD",
+    "lightGrayishBlue": "#F5F7FA",
+    "darkerGray": "#0D0D0D"
+  },
+  "typography": {
+    "family": "Helvetica Neue",
+    "fallback": [
+      "Helvetica",
+      "Arial",
+      "sans-serif"
+    ],
+    "heading": {
+      "weight": 500,
+      "letterSpacing": "-0.04em",
+      "lineHeight": 1.1
+    },
+    "subheading": {
+      "weight": 400,
+      "letterSpacing": "-0.02em",
+      "lineHeight": 1.2
+    },
+    "body": {
+      "weight": 400,
+      "letterSpacing": "0em",
+      "lineHeight": 1.4
+    },
+    "caption": {
+      "weight": 400,
+      "letterSpacing": "0.4em",
+      "lineHeight": 1.1
+    }
+  }
+}

@@ -1,0 +1,86 @@
+DRAGON BAY — COMPLETE WEBSITE EXPORT
+
+WHAT YOU HAVE
+The website/ folder contains the complete static site: HTML, CSS, JavaScript,
+images, all logo exports, the 33-page PDF, and the downloadable brand kit.
+No build step, database, paid API, or ChatGPT connection is required to host it.
+
+HOST IT ON YOUR EXISTING WEBSITE
+1. Unzip this package on your computer.
+2. Open your hosting's file manager or FTP client.
+3. Create a new public folder for the guide, for example dragon-bay.
+4. Upload everything INSIDE website/ into that folder. Keep the assets folder
+   and its subfolders in place.
+5. Open your domain followed by /dragon-bay/ in your browser.
+
+For a hosting account whose public web root is public_html, that means:
+put index.html, styles.css, app.js, favicon.svg, and assets/ directly in
+public_html/dragon-bay/.
+
+Using a separate folder lets you keep your existing homepage. If you want this
+guide to be your homepage, use your domain's public document root instead.
+The exact public document-root name depends on your hosting account.
+
+WORDPRESS
+This is a standalone static website, not a WordPress theme or Elementor file.
+It can sit in its own public folder next to an existing WordPress site. You
+can add a normal navigation link to that folder from your WordPress menu.
+
+REPLACE THE APPLICATION IMAGES
+The easiest way is to open website/assets/applications.json in a text editor.
+Each entry has image, thumbnail, title, alt, and caption fields.
+1. Put your own JPG, PNG, or WebP image in website/assets/applications/.
+2. Update the matching image path and thumbnail path in applications.json.
+3. Change title, alt, and caption to describe your image.
+4. Upload the changed JSON file and your images to the same folders on your host.
+
+Use the same image path for image and thumbnail if you do not want to make a
+separate thumbnail. Keep id unchanged when replacing an existing image.
+Use paths relative to index.html, such as assets/applications/my-truck.jpg.
+Use filenames without spaces, and match upper/lowercase exactly.
+
+Recommended shape: 16:9 landscape. The existing full-size application images
+are 1600 x 900 pixels, with smaller 760 x 428 thumbnails. Gallery thumbnails
+crop to 16:9; the enlarged view keeps the image's proportions. Renaming .jpg
+to .webp does not convert an image; set the correct extension in the JSON.
+
+For filenames of every existing image and where it appears, read IMAGE-MAP.md.
+
+OTHER EDITS
+Text, headings, diagram paths, and section structure: website/index.html
+Colors, sizing, spacing, and responsive layouts: website/styles.css
+Interactive behavior: website/app.js
+Application pictures, titles, and captions: website/assets/applications.json
+Download-selector entries: website/assets/catalog.json
+Logo artwork: website/assets/logos/
+PDF download: website/assets/dragon-bay-brand-guidelines.pdf
+ZIP download: website/assets/dragon-bay-brand-kit.zip
+
+Replacing a picture on the website does not rewrite the downloadable PDF or
+brand-kit ZIP. Replace those files separately if their contents also change.
+If you change the number of images, logos, or PDF pages, update any fixed count
+labels in index.html as well. The expandable gallery count updates itself.
+
+LOCAL PREVIEW
+Uploading to your hosting is the simplest way to test the complete site.
+If Python 3 is installed on your computer, open a terminal in website/ and run:
+  python3 -m http.server 8000
+Then open http://localhost:8000/ in your browser. On Windows, the command may
+be py -m http.server 8000 instead. Stop the preview with Ctrl+C.
+Double-clicking index.html may block the JSON files used by the gallery and
+asset selector; use a local web server or the uploaded site for a full preview.
+
+AFTER UPLOADING
+Check the logo switches, image gallery, and downloads. If old images remain,
+hard-refresh the page and clear any cache configured on your hosting.
+HTTPS lets the browser's Copy color action use the Clipboard API normally.
+
+TYPEFACES
+The brand wordmark is supplied as outlined SVG artwork and needs no font file.
+Body text uses Helvetica Neue when installed, with Helvetica/Arial fallbacks.
+Font files were not supplied and are not included in this export.
+
+ABOUT THIS COPY
+This export matches the published Dragon Bay guide, with a small portability
+improvement: gallery image paths and captions are configurable in one JSON file.
+The currently published ChatGPT-hosted site has not been changed.
