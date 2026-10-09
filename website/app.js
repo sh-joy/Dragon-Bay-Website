@@ -337,6 +337,13 @@ async function loadResources() {
   if (results[1].status === 'fulfilled') {
     applications = results[1].value;
     renderApplications();
+    const preload = window.requestIdleCallback || (cb => setTimeout(cb, 1200));
+    preload(() => {
+      applications.slice(6).forEach(item => {
+        const img = new Image();
+        img.src = item.image || `assets/applications/${item.id}.webp`;
+      });
+    });
   } else {
     const message = document.createElement('p');
     message.textContent = 'The gallery could not load. View all applications in the brand PDF.';
